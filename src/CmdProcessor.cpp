@@ -9,9 +9,9 @@ CmdProcessor& CmdProcessor::get_instance() {
   return instance;
 }
 
-async::handle_t CmdProcessor::create_context(size_t bulk_size) {
+handle_t CmdProcessor::create_context(size_t bulk_size) {
   auto context = std::make_shared<CmdProcessContext>(bulk_size, ++context_id_);
-  auto handle = reinterpret_cast<async::handle_t>(context.get());
+  auto handle = reinterpret_cast<handle_t>(context.get());
 
   auto console_writer = std::make_unique<bulk::ConsoleWriter>();
   auto file_writer = std::make_unique<bulk::FileWriter>();
@@ -28,7 +28,7 @@ async::handle_t CmdProcessor::create_context(size_t bulk_size) {
   return handle;
 }
 
-void CmdProcessor::destroy_context(const async::handle_t& handle) {
+void CmdProcessor::destroy_context(const handle_t& handle) {
   std::unique_lock<std::mutex> lock(contexts_mutex_);
   auto it = contexts_.find(handle);
   if(it != contexts_.cend()) {
@@ -37,7 +37,7 @@ void CmdProcessor::destroy_context(const async::handle_t& handle) {
   }
 }
 
-void CmdProcessor::process(const async::handle_t& handle, const char* data, std::size_t size) {
+void CmdProcessor::process(const handle_t& handle, const char* data, std::size_t size) {
   std::unique_lock<std::mutex> lock(contexts_mutex_);
   auto it = contexts_.find(handle);
   if(it != contexts_.cend())

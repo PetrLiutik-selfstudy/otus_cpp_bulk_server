@@ -1,12 +1,13 @@
 ﻿#pragma once
 
 #include "CmdProcessContext.h"
-#include "async.h"
 
 #include <mutex>
 #include <set>
 
 namespace bulk {
+
+using handle_t = void*;
 
 /**
  * @brief Класс обработчика команд.
@@ -24,13 +25,13 @@ class CmdProcessor  {
      * @param bulk_size - размер блока команд.
      * @return handle контекста обработки команд.
      */
-    async::handle_t create_context(size_t bulk_size);
+    handle_t create_context(size_t bulk_size);
 
     /**
      * @brief Уничтожить контекст обработки блоков команд.
      * @param handle - handle контекста обработки команд.
      */
-    void destroy_context(const async::handle_t& handle);
+    void destroy_context(const handle_t& handle);
 
     /**
      * @brief Обработать входные данные, содержащие команды.
@@ -38,14 +39,14 @@ class CmdProcessor  {
      * @param data - обрабатываемые данные.
      * @param size - размер данных.
      */
-    void process(const async::handle_t& handle, const char* data, std::size_t size);
+    void process(const handle_t& handle, const char* data, std::size_t size);
 
   private:
     CmdProcessor() = default;
     ~CmdProcessor() = default;
 
     std::mutex contexts_mutex_{};
-    std::map<async::handle_t, std::shared_ptr<CmdProcessContext>> contexts_;
+    std::map<handle_t, std::shared_ptr<CmdProcessContext>> contexts_;
     uint8_t context_id_{};
 };
 

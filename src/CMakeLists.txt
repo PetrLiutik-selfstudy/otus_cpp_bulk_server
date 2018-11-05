@@ -1,17 +1,21 @@
 ﻿cmake_minimum_required(VERSION 3.2)
 
 if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
-    project(async VERSION 1.1.$ENV{TRAVIS_BUILD_NUMBER})
+    project(bulk_server VERSION 1.1.$ENV{TRAVIS_BUILD_NUMBER})
 else ()
-    project(async VERSION 1.1.1)
+    project(bulk_server VERSION 1.1.1)
 endif ()
 
-find_package (Threads REQUIRED)
+find_package(Threads REQUIRED)
+find_package(Boost REQUIRED)
+#find_package(Boost COMPONENTS system REQUIRED)
+#include_directories(${Boost_INCLUDE_DIRS})
 
 file(GLOB_RECURSE SOURCES *.cpp *.h)
 
 # Setup application
-add_library(${PROJECT_NAME} SHARED ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/inc ${CMAKE_SOURCE_DIR}/src)
 
 configure_file(version.h.in ${PROJECT_SOURCE_DIR}/version.h)
 
@@ -28,12 +32,9 @@ else ()
     )
 endif ()
 
-target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR})
-
-install(TARGETS ${PROJECT_NAME} DESTINATION lib)
-install(FILES ../inc/async.h DESTINATION include)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
