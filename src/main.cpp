@@ -1,17 +1,39 @@
+#include "ver.h"
+#include "BulkServer.h"
+
 #include <iostream>
 
-//#include "async.h"
 
-int main(int, char *[]) {
-//  std::size_t bulk = 5;
-//  auto h = async::connect(bulk);
-//  auto h2 = async::connect(bulk);
-//  async::receive(h, "1", 1);
-//  async::receive(h2, "1\n", 2);
-//  async::receive(h, "\n2\n3\n4\n5\n6\n{\na\n", 15);
-//  async::receive(h, "b\nc\nd\n}\n89\n", 11);
-//  async::disconnect(h);
-//  async::disconnect(h2);
+int main(int argc, char const *argv[]) {
+  std::cout << "bulk_server version: "
+            << ver_major() << "."
+            << ver_minor() << "."
+            << ver_patch() << std::endl;
+
+  if(argc != 3) {
+    std::cerr << "Wrong number of arguments (expected 2). Usage: bulk_server <port> <bulk_size>. \n" << std::endl;
+    return EXIT_FAILURE;
+  }
+
+  auto port = std::strtoll(argv[1], nullptr, 0);
+  if((port <= 0) || (port > 65535)) {
+    std::cerr << "Port must be an integer between 0 and 65535.\n";
+    return EXIT_FAILURE;
+  }
+
+  auto bulk_size = std::strtoll(argv[2], nullptr, 0);
+  if(bulk_size <= 0) {
+    std::cerr << "Bulk size must be integer greater than 0.\n";
+    return EXIT_FAILURE;
+  }
+
+  // Создание и запуск сервера.
+  try {
+    bulk::BulkServer bulk_server{static_cast<uint16_t>(port), static_cast<size_t>(bulk_size)};
+    bulk_server.start();
+  } catch(std::exception& e) {
+    std::cerr << e.what() << std::endl;
+  }
 
   return 0;
 }

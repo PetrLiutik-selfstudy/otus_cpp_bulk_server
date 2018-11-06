@@ -8,8 +8,7 @@ endif ()
 
 find_package(Threads REQUIRED)
 find_package(Boost REQUIRED)
-#find_package(Boost COMPONENTS system REQUIRED)
-#include_directories(${Boost_INCLUDE_DIRS})
+find_package(Boost COMPONENTS system REQUIRED)
 
 file(GLOB_RECURSE SOURCES *.cpp *.h)
 
