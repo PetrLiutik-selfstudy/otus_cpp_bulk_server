@@ -26,6 +26,12 @@ class CmdInterpreter {
      */
     bool interpret(const std::string& input, std::string& cmd);
 
+    /**
+     * @brief Проверка завершенности динамического блока.
+     * @return true - динамический блок команд заверешен, false - динамический блок команд не завершен.
+     */
+    bool is_dyn_bulk_finished();
+
   private:
 
     /// Максимальный размер блока команд.

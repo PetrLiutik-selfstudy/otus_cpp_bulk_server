@@ -7,8 +7,6 @@
 
 namespace bulk {
 
-using handle_t = void*;
-
 /**
  * @brief Класс обработчика команд.
  */
@@ -48,6 +46,7 @@ class CmdProcessor  {
     std::mutex contexts_mutex_{};
     std::map<handle_t, std::shared_ptr<CmdProcessContext>> contexts_;
     uint8_t context_id_{};
+    size_t seed_{};
 };
 
 } // namespace bulk.

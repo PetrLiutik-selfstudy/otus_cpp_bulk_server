@@ -13,7 +13,7 @@ void CmdProcessContext::subscribe(observer_t observer) {
     observers_.emplace_back(std::move(observer));
 }
 
-void CmdProcessContext::process(const char* data, std::size_t size, bool finish_bulk) {
+void CmdProcessContext::process(const handle_t& handle, const char* data, std::size_t size, bool finish_bulk) {
   if(nullptr != data)
     data_.append(data, size);
   size_t rows{};
@@ -32,11 +32,18 @@ void CmdProcessContext::process(const char* data, std::size_t size, bool finish_
         if(finish_bulk)
           break;
       }
-      data_ = data_.substr(++end_line);
+      if(data_.size() > end_line)
+        data_ = data_.substr(++end_line);
+      else
+        break;
     }
     else
       break;
   }
+
+  // Назначение handle от имени которого идет обработка.
+  handle_t empty_handle{};
+  handle_ = interpreter_.is_dyn_bulk_finished() ? empty_handle : handle;
 }
 
 void CmdProcessContext::publish(const Bulk& bulk) {
@@ -50,6 +57,15 @@ void CmdProcessContext::print_metrics(std::ostream& os) {
   for(auto& it: observers_) {
     os << it->get_metrics();
   }
+}
+
+bool CmdProcessContext::is_busy() {
+  handle_t empty_handle{};
+  return handle_ != empty_handle;
+}
+
+bool CmdProcessContext::is_busy(const handle_t& handle) {
+  return handle_ != handle;
 }
 
 } // namespace bulk.

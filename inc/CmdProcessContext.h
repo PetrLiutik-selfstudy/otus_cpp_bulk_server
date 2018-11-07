@@ -11,6 +11,8 @@
 
 namespace bulk {
 
+using handle_t = void*;
+
 /**
  * @brief Класс котнекста обработчика команд.
  */
@@ -34,11 +36,24 @@ class CmdProcessContext : public IObservable  {
 
     /**
      * @brief Обработка входной команды.
+     * @param handle - handle от имени которого выполняется обработка.
      * @param data - входной данные, содержащие команды.
      * @param size - размер входных данных.
      * @param finish_bulk - принудительное завершение блока команд.
      */
-    void process(const char* data, std::size_t size, bool finish_bulk = false);
+    void process(const handle_t& handle, const char* data, std::size_t size, bool finish_bulk = false);
+
+    /**
+     * @brief Проверка занятости контекста обработкой блока.
+     * @return true - контекст занят, false - контекст свободен.
+     */
+    bool is_busy();
+
+    /**
+    * @brief Проверка занятости контекста обработкой блока конкретным handle'ом.
+    * @return true - контекст занят, false - контекст свободен.
+    */
+    bool is_busy(const handle_t& handle);
 
     /**
      * @brief Вывод метрик в поток.
@@ -66,6 +81,8 @@ class CmdProcessContext : public IObservable  {
     std::string data_;
     /// id контекста.
     uint8_t id_;
+    /// handle от имени которого выполняется обработка.
+    handle_t handle_{};
 };
 
 } // namespace bulk.
