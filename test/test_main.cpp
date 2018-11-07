@@ -82,7 +82,7 @@ TEST(context_test_case, subscribe_test) {
 
   std::string str = "cmd1\n";
 
-  context.process(str.c_str(), str.size());
+  context.process(nullptr, str.c_str(), str.size());
 
   EXPECT_EQ(bulk::TestWriter::get_bulk(), std::vector<std::string>{"cmd1"});
   EXPECT_NE(bulk::TestWriter::get_time(), std::time_t{});
@@ -96,8 +96,8 @@ TEST(context_test_case, partial_bulk_test) {
 
   std::string str = "cmd1\ncmd2\n";
 
-  context.process(str.c_str(), str.size());
-  context.process(nullptr, 0, true); // Принудительное завершение блока.
+  context.process(nullptr, str.c_str(), str.size());
+  context.process(nullptr, nullptr, 0, true); // Принудительное завершение блока.
 
   std::vector<std::string> result{"cmd1", "cmd2"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -111,7 +111,7 @@ TEST(context_test_case, full_bulk_test) {
 
   std::string str = "cmd1\ncmd2\ncmd3\n";
 
-  context.process(str.c_str(), str.size());
+  context.process(nullptr, str.c_str(), str.size());
 
   std::vector<std::string> result{"cmd1", "cmd2", "cmd3"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -125,8 +125,8 @@ TEST(context_test_case, full_tail_bulk_test) {
 
   std::string str = "cmd1\ncmd2\ncmd3\ncmd4\ncmd5\n";
 
-  context.process(str.c_str(), str.size());
-  context.process(nullptr, 0, true); // Принудительное завершение блока.
+  context.process(nullptr, str.c_str(), str.size());
+  context.process(nullptr, nullptr, 0, true); // Принудительное завершение блока.
 
   std::vector<std::string> result{"cmd4", "cmd5"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -140,7 +140,7 @@ TEST(context_test_case, partial_dyn_bulk_test) {
 
   std::string str = "cmd1\ncmd2\n{\ncmd3\ncmd4\ncmd5\ncmd6\n";
 
-  context.process(str.c_str(), str.size());
+  context.process(nullptr, str.c_str(), str.size());
 
   std::vector<std::string> result{"cmd1", "cmd2"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -154,7 +154,7 @@ TEST(context_test_case, full_dyn_bulk_test) {
 
   std::string str = "cmd1\ncmd2\n{\ncmd3\ncmd4\ncmd5\ncmd6\n}\n";
 
-  context.process(str.c_str(), str.size());
+  context.process(nullptr, str.c_str(), str.size());
 
   std::vector<std::string> result{"cmd3", "cmd4", "cmd5", "cmd6"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -168,7 +168,7 @@ TEST(context_test_case, full_dyn_bulk_1_test) {
 
   std::string str = "cmd1\ncmd2\n{\ncmd3\n{\ncmd4\ncmd5\n}\ncmd6\n}\n";
 
-  context.process(str.c_str(), str.size());
+  context.process(nullptr, str.c_str(), str.size());
 
   std::vector<std::string> result{"cmd3", "cmd4", "cmd5", "cmd6"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -182,8 +182,8 @@ TEST(context_test_case, eof_bulk_test) {
 
   std::string str = "cmd1\ncmd2\n{\ncmd3\ncmd4\ncmd5\ncmd6\n}\ncmd7\ncmd8\n";
 
-  context.process(str.c_str(), str.size());
-  context.process(nullptr, 0, true); // Принудительное завершение блока.
+  context.process(nullptr, str.c_str(), str.size());
+  context.process(nullptr, nullptr, 0, true); // Принудительное завершение блока.
 
   std::vector<std::string> result{"cmd7", "cmd8"};
   EXPECT_EQ(bulk::TestWriter::get_bulk(), result);
@@ -197,8 +197,8 @@ TEST(context_test_case, metrics_test) {
 
   std::string str = "cmd1\ncmd2\n{\ncmd3\ncmd4\ncmd5\ncmd6\n}\ncmd7\ncmd8\n";
 
-  context.process(str.c_str(), str.size());
-  context.process(nullptr, 0, true); // Принудительное завершение блока.
+  context.process(nullptr, str.c_str(), str.size());
+  context.process(nullptr, nullptr, 0, true); // Принудительное завершение блока.
 
   std::stringstream ss1;
   ss1 << "test";
@@ -219,7 +219,7 @@ TEST(context_test_case, context_id_test) {
 
   std::string str = "cmd1\n";
 
-  context.process(str.c_str(), str.size());
+  context.process(nullptr, str.c_str(), str.size());
 
   EXPECT_NE(bulk::TestWriter::get_context_id(), 1);
 }
