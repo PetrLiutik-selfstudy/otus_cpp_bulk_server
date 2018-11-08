@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>bulk_server: Исходный файл inc/ConsoleWriter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   </div>
+   <div id="projectbrief">Otus homework 12</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Друзья</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ConsoleWriter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ConsoleWriter_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IStreamWriter_8h.html">IStreamWriter.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ThreadPool_8h.html">ThreadPool.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>bulk {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classbulk_1_1ConsoleWriter.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbulk_1_1ConsoleWriter.html">ConsoleWriter</a> : <span class="keyword">public</span> <a class="code" href="classbulk_1_1IStreamWriter.html">IStreamWriter</a>, <span class="keyword">public</span> <a class="code" href="classbulk_1_1ThreadPool.html">ThreadPool</a>&lt;&gt; {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classbulk_1_1ConsoleWriter.html#a5c3a541be669eae5ca334894332cca0b">   20</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classbulk_1_1ConsoleWriter.html#a5c3a541be669eae5ca334894332cca0b">ConsoleWriter</a>(std::ostream&amp; os = std::cout) : os_(os), metrics_{<span class="stringliteral">&quot;log&quot;</span>} {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classbulk_1_1ConsoleWriter.html#a7f37896cc59f40e2af2ec94c936a5a85">   23</a></span>&#160;    <a class="code" href="classbulk_1_1ConsoleWriter.html#a7f37896cc59f40e2af2ec94c936a5a85">~ConsoleWriter</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <a class="code" href="classbulk_1_1ThreadPool.html#a0f283a3b59167b75b428128658352199">stop</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbulk_1_1ConsoleWriter.html#acf792628758f325a4c59c1d5926e3fca">write</a>(uint8_t context_id, <span class="keyword">const</span> <a class="code" href="classbulk_1_1Bulk.html">Bulk</a>&amp; bulk) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classbulk_1_1Metrics.html">Metrics</a>&amp; <a class="code" href="classbulk_1_1ConsoleWriter.html#adf59c13965f1c180386b0b5e895b3daf">get_metrics</a>() final;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  private:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::ostream&amp; os_;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::mutex metrics_mutex_{};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Metrics metrics_;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">// namespace bulk.</span></div>
+<div class="ttc" id="classbulk_1_1ConsoleWriter_html_a7f37896cc59f40e2af2ec94c936a5a85"><div class="ttname"><a href="classbulk_1_1ConsoleWriter.html#a7f37896cc59f40e2af2ec94c936a5a85">bulk::ConsoleWriter::~ConsoleWriter</a></div><div class="ttdeci">~ConsoleWriter() override</div><div class="ttdef"><b>Definition:</b> ConsoleWriter.h:23</div></div>
+<div class="ttc" id="ThreadPool_8h_html"><div class="ttname"><a href="ThreadPool_8h.html">ThreadPool.h</a></div></div>
+<div class="ttc" id="classbulk_1_1Bulk_html"><div class="ttname"><a href="classbulk_1_1Bulk.html">bulk::Bulk</a></div><div class="ttdoc">Класс блока команд. </div><div class="ttdef"><b>Definition:</b> Bulk.h:13</div></div>
+<div class="ttc" id="classbulk_1_1ConsoleWriter_html_acf792628758f325a4c59c1d5926e3fca"><div class="ttname"><a href="classbulk_1_1ConsoleWriter.html#acf792628758f325a4c59c1d5926e3fca">bulk::ConsoleWriter::write</a></div><div class="ttdeci">void write(uint8_t context_id, const Bulk &amp;bulk) final</div><div class="ttdoc">Запись блока команд в поток. </div><div class="ttdef"><b>Definition:</b> ConsoleWriter.cpp:8</div></div>
+<div class="ttc" id="classbulk_1_1ConsoleWriter_html_adf59c13965f1c180386b0b5e895b3daf"><div class="ttname"><a href="classbulk_1_1ConsoleWriter.html#adf59c13965f1c180386b0b5e895b3daf">bulk::ConsoleWriter::get_metrics</a></div><div class="ttdeci">Metrics &amp; get_metrics() final</div><div class="ttdoc">Дать метрики работы потоков. </div><div class="ttdef"><b>Definition:</b> ConsoleWriter.cpp:18</div></div>
+<div class="ttc" id="classbulk_1_1Metrics_html"><div class="ttname"><a href="classbulk_1_1Metrics.html">bulk::Metrics</a></div><div class="ttdef"><b>Definition:</b> Metrics.h:12</div></div>
+<div class="ttc" id="classbulk_1_1ConsoleWriter_html"><div class="ttname"><a href="classbulk_1_1ConsoleWriter.html">bulk::ConsoleWriter</a></div><div class="ttdoc">Класс вывода блока команд в консоль. </div><div class="ttdef"><b>Definition:</b> ConsoleWriter.h:14</div></div>
+<div class="ttc" id="IStreamWriter_8h_html"><div class="ttname"><a href="IStreamWriter_8h.html">IStreamWriter.h</a></div></div>
+<div class="ttc" id="classbulk_1_1ThreadPool_html_a0f283a3b59167b75b428128658352199"><div class="ttname"><a href="classbulk_1_1ThreadPool.html#a0f283a3b59167b75b428128658352199">bulk::ThreadPool&lt;&gt;::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Завершение работы всех потоков пула. </div><div class="ttdef"><b>Definition:</b> ThreadPool.h:57</div></div>
+<div class="ttc" id="classbulk_1_1ThreadPool_html"><div class="ttname"><a href="classbulk_1_1ThreadPool.html">bulk::ThreadPool</a></div><div class="ttdoc">Шаблон пула потоков. </div><div class="ttdef"><b>Definition:</b> ThreadPool.h:19</div></div>
+<div class="ttc" id="classbulk_1_1ConsoleWriter_html_a5c3a541be669eae5ca334894332cca0b"><div class="ttname"><a href="classbulk_1_1ConsoleWriter.html#a5c3a541be669eae5ca334894332cca0b">bulk::ConsoleWriter::ConsoleWriter</a></div><div class="ttdeci">ConsoleWriter(std::ostream &amp;os=std::cout)</div><div class="ttdoc">Консруктор. </div><div class="ttdef"><b>Definition:</b> ConsoleWriter.h:20</div></div>
+<div class="ttc" id="classbulk_1_1IStreamWriter_html"><div class="ttname"><a href="classbulk_1_1IStreamWriter.html">bulk::IStreamWriter</a></div><div class="ttdoc">Интерфейс для классов выводящих блок команд в поток. </div><div class="ttdef"><b>Definition:</b> IStreamWriter.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

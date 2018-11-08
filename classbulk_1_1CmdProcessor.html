@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>bulk_server: Класс bulk::CmdProcessor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   </div>
+   <div id="projectbrief">Otus homework 12</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&#160;указатель&#160;классов</span></a></li>
+      <li><a href="inherits.html"><span>Иерархия&#160;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&#160;классов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Друзья</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebulk.html">bulk</a></li><li class="navelem"><a class="el" href="classbulk_1_1CmdProcessor.html">CmdProcessor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classbulk_1_1CmdProcessor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс bulk::CmdProcessor</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс обработчика команд.  
+ <a href="classbulk_1_1CmdProcessor.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="CmdProcessor_8h_source.html">CmdProcessor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a36f88dcc808fff979835e750f5438619"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessor.html#a36f88dcc808fff979835e750f5438619">create_context</a> (size_t bulk_size)</td></tr>
+<tr class="memdesc:a36f88dcc808fff979835e750f5438619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать контекст обработки блоков команд.  <a href="#a36f88dcc808fff979835e750f5438619">Подробнее...</a><br/></td></tr>
+<tr class="separator:a36f88dcc808fff979835e750f5438619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d5e5dd782890232564f611a9559eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessor.html#a16d5e5dd782890232564f611a9559eae">destroy_context</a> (const <a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> &amp;handle)</td></tr>
+<tr class="memdesc:a16d5e5dd782890232564f611a9559eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уничтожить контекст обработки блоков команд.  <a href="#a16d5e5dd782890232564f611a9559eae">Подробнее...</a><br/></td></tr>
+<tr class="separator:a16d5e5dd782890232564f611a9559eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8a8be53aef3e2de1f0cb9ffb7cdeb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessor.html#a8b8a8be53aef3e2de1f0cb9ffb7cdeb6">process</a> (const <a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> &amp;handle, const char *data, std::size_t size)</td></tr>
+<tr class="memdesc:a8b8a8be53aef3e2de1f0cb9ffb7cdeb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработать входные данные, содержащие команды.  <a href="#a8b8a8be53aef3e2de1f0cb9ffb7cdeb6">Подробнее...</a><br/></td></tr>
+<tr class="separator:a8b8a8be53aef3e2de1f0cb9ffb7cdeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a6ad2db2d9cec634898e5c8811493f8cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classbulk_1_1CmdProcessor.html">CmdProcessor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessor.html#a6ad2db2d9cec634898e5c8811493f8cf">get_instance</a> ()</td></tr>
+<tr class="memdesc:a6ad2db2d9cec634898e5c8811493f8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дать объект класса <a class="el" href="classbulk_1_1CmdProcessor.html" title="Класс обработчика команд. ">CmdProcessor</a>.  <a href="#a6ad2db2d9cec634898e5c8811493f8cf">Подробнее...</a><br/></td></tr>
+<tr class="separator:a6ad2db2d9cec634898e5c8811493f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс обработчика команд. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a class="anchor" id="a36f88dcc808fff979835e750f5438619"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> bulk::CmdProcessor::create_context </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bulk_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создать контекст обработки блоков команд. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bulk_size</td><td>- размер блока команд. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>handle контекста обработки команд. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16d5e5dd782890232564f611a9559eae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bulk::CmdProcessor::destroy_context </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уничтожить контекст обработки блоков команд. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>- handle контекста обработки команд. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ad2db2d9cec634898e5c8811493f8cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbulk_1_1CmdProcessor.html">CmdProcessor</a> &amp; bulk::CmdProcessor::get_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Дать объект класса <a class="el" href="classbulk_1_1CmdProcessor.html" title="Класс обработчика команд. ">CmdProcessor</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>объект класса <a class="el" href="classbulk_1_1CmdProcessor.html" title="Класс обработчика команд. ">CmdProcessor</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8b8a8be53aef3e2de1f0cb9ffb7cdeb6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bulk::CmdProcessor::process </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обработать входные данные, содержащие команды. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>- handle контекста обработки команд. </td></tr>
+    <tr><td class="paramname">data</td><td>- обрабатываемые данные. </td></tr>
+    <tr><td class="paramname">size</td><td>- размер данных. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>inc/<a class="el" href="CmdProcessor_8h_source.html">CmdProcessor.h</a></li>
+<li>src/<a class="el" href="CmdProcessor_8cpp.html">CmdProcessor.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

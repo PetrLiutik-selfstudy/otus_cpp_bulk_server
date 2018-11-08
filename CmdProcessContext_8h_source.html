@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>bulk_server: Исходный файл inc/CmdProcessContext.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">bulk_server
+   </div>
+   <div id="projectbrief">Otus homework 12</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульная&#160;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&#160;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&#160;членов&#160;всех&#160;файлов</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Указатель</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Классы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Пространства имен</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Файлы</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Функции</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Определения типов</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Друзья</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Макросы</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CmdProcessContext.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="CmdProcessContext_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Bulk_8h.html">Bulk.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CmdInterpreter_8h.html">CmdInterpreter.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IObservable_8h.html">IObservable.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Metrics_8h.html">Metrics.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>bulk {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">   14</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> = <span class="keywordtype">void</span>*;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classbulk_1_1CmdProcessContext.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbulk_1_1CmdProcessContext.html">CmdProcessContext</a> : <span class="keyword">public</span> <a class="code" href="classbulk_1_1IObservable.html">IObservable</a>  {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classbulk_1_1CmdProcessContext.html#a80829205cc174422b36deb31166a506c">   25</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classbulk_1_1CmdProcessContext.html#a80829205cc174422b36deb31166a506c">CmdProcessContext</a>(<span class="keywordtype">size_t</span> bulk_size, uint8_t <span class="keywordtype">id</span>) :</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      interpreter_{bulk_size}, metrics_{<span class="stringliteral">&quot;main&quot;</span>}, id_{<span class="keywordtype">id</span>} {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classbulk_1_1CmdProcessContext.html#a62d113a0f8aecbf90d52183a71bb6f5f">~CmdProcessContext</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbulk_1_1CmdProcessContext.html#acbf87c8777bc50e6b0e9329acc03bd77">subscribe</a>(<a class="code" href="namespacebulk.html#a02f0c0bdf43d8b80e49d3fdbd42f2639">observer_t</a> observer) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbulk_1_1CmdProcessContext.html#a0f81d139e5826ce5c412f36ee8bb42dd">process</a>(<span class="keyword">const</span> <a class="code" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a>&amp; handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* data, std::size_t size, <span class="keywordtype">bool</span> finish_bulk = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classbulk_1_1CmdProcessContext.html#a74d1a31c7f9ddf2cb5a257f4da2d34ac">is_busy</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classbulk_1_1CmdProcessContext.html#a74d1a31c7f9ddf2cb5a257f4da2d34ac">is_busy</a>(<span class="keyword">const</span> <a class="code" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a>&amp; handle);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbulk_1_1CmdProcessContext.html#a71cf06654ffe110e700d1bcc8b7d6e9a">print_metrics</a>(std::ostream&amp; os);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> publish(<span class="keyword">const</span> Bulk&amp; bulk) <span class="keyword">final</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::list&lt;observer_t&gt; observers_{};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Bulk bulk_{};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    CmdInterpreter interpreter_;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Metrics metrics_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::string data_;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    uint8_t id_;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> handle_{};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <span class="comment">// namespace bulk.</span></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html_a80829205cc174422b36deb31166a506c"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html#a80829205cc174422b36deb31166a506c">bulk::CmdProcessContext::CmdProcessContext</a></div><div class="ttdeci">CmdProcessContext(size_t bulk_size, uint8_t id)</div><div class="ttdoc">Конструктор. </div><div class="ttdef"><b>Definition:</b> CmdProcessContext.h:25</div></div>
+<div class="ttc" id="Metrics_8h_html"><div class="ttname"><a href="Metrics_8h.html">Metrics.h</a></div></div>
+<div class="ttc" id="namespacebulk_html_a02f0c0bdf43d8b80e49d3fdbd42f2639"><div class="ttname"><a href="namespacebulk.html#a02f0c0bdf43d8b80e49d3fdbd42f2639">bulk::observer_t</a></div><div class="ttdeci">std::unique_ptr&lt; IStreamWriter &gt; observer_t</div><div class="ttdoc">Тип обозревателя. </div><div class="ttdef"><b>Definition:</b> IObservable.h:10</div></div>
+<div class="ttc" id="namespacebulk_html_a336861d9758dd8af1603b81ef1ec6c9d"><div class="ttname"><a href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">bulk::handle_t</a></div><div class="ttdeci">void * handle_t</div><div class="ttdef"><b>Definition:</b> CmdProcessContext.h:14</div></div>
+<div class="ttc" id="classbulk_1_1IObservable_html"><div class="ttname"><a href="classbulk_1_1IObservable.html">bulk::IObservable</a></div><div class="ttdoc">Интерфейс обозреваемого. </div><div class="ttdef"><b>Definition:</b> IObservable.h:15</div></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html_a71cf06654ffe110e700d1bcc8b7d6e9a"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html#a71cf06654ffe110e700d1bcc8b7d6e9a">bulk::CmdProcessContext::print_metrics</a></div><div class="ttdeci">void print_metrics(std::ostream &amp;os)</div><div class="ttdoc">Вывод метрик в поток. </div><div class="ttdef"><b>Definition:</b> CmdProcessContext.cpp:55</div></div>
+<div class="ttc" id="Bulk_8h_html"><div class="ttname"><a href="Bulk_8h.html">Bulk.h</a></div></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html_a62d113a0f8aecbf90d52183a71bb6f5f"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html#a62d113a0f8aecbf90d52183a71bb6f5f">bulk::CmdProcessContext::~CmdProcessContext</a></div><div class="ttdeci">~CmdProcessContext() override=default</div></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html_a0f81d139e5826ce5c412f36ee8bb42dd"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html#a0f81d139e5826ce5c412f36ee8bb42dd">bulk::CmdProcessContext::process</a></div><div class="ttdeci">void process(const handle_t &amp;handle, const char *data, std::size_t size, bool finish_bulk=false)</div><div class="ttdoc">Обработка входной команды. </div><div class="ttdef"><b>Definition:</b> CmdProcessContext.cpp:16</div></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html_a74d1a31c7f9ddf2cb5a257f4da2d34ac"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html#a74d1a31c7f9ddf2cb5a257f4da2d34ac">bulk::CmdProcessContext::is_busy</a></div><div class="ttdeci">bool is_busy()</div><div class="ttdoc">Проверка занятости контекста обработкой блока. </div><div class="ttdef"><b>Definition:</b> CmdProcessContext.cpp:62</div></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html_acbf87c8777bc50e6b0e9329acc03bd77"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html#acbf87c8777bc50e6b0e9329acc03bd77">bulk::CmdProcessContext::subscribe</a></div><div class="ttdeci">void subscribe(observer_t observer) final</div><div class="ttdoc">Подписка на получение блоков команд на вывод. </div><div class="ttdef"><b>Definition:</b> CmdProcessContext.cpp:10</div></div>
+<div class="ttc" id="classbulk_1_1CmdProcessContext_html"><div class="ttname"><a href="classbulk_1_1CmdProcessContext.html">bulk::CmdProcessContext</a></div><div class="ttdoc">Класс котнекста обработчика команд. </div><div class="ttdef"><b>Definition:</b> CmdProcessContext.h:19</div></div>
+<div class="ttc" id="CmdInterpreter_8h_html"><div class="ttname"><a href="CmdInterpreter_8h.html">CmdInterpreter.h</a></div></div>
+<div class="ttc" id="IObservable_8h_html"><div class="ttname"><a href="IObservable_8h.html">IObservable.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
