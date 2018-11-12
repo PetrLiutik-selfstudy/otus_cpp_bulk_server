@@ -124,6 +124,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="memitem:acbf87c8777bc50e6b0e9329acc03bd77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessContext.html#acbf87c8777bc50e6b0e9329acc03bd77">subscribe</a> (<a class="el" href="namespacebulk.html#a02f0c0bdf43d8b80e49d3fdbd42f2639">observer_t</a> observer) final</td></tr>
 <tr class="memdesc:acbf87c8777bc50e6b0e9329acc03bd77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписка на получение блоков команд на вывод.  <a href="#acbf87c8777bc50e6b0e9329acc03bd77">Подробнее...</a><br/></td></tr>
 <tr class="separator:acbf87c8777bc50e6b0e9329acc03bd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac7e846358d28d97adc2d4f342f4fa4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessContext.html#aac7e846358d28d97adc2d4f342f4fa4e">peek_process_by_this</a> (const char *data, std::size_t size)</td></tr>
+<tr class="memdesc:aac7e846358d28d97adc2d4f342f4fa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка необходимости команды обработки данным контекстом.  <a href="#aac7e846358d28d97adc2d4f342f4fa4e">Подробнее...</a><br/></td></tr>
+<tr class="separator:aac7e846358d28d97adc2d4f342f4fa4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f81d139e5826ce5c412f36ee8bb42dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdProcessContext.html#a0f81d139e5826ce5c412f36ee8bb42dd">process</a> (const <a class="el" href="namespacebulk.html#a336861d9758dd8af1603b81ef1ec6c9d">handle_t</a> &amp;handle, const char *data, std::size_t size, bool finish_bulk=false)</td></tr>
 <tr class="memdesc:a0f81d139e5826ce5c412f36ee8bb42dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка входной команды.  <a href="#a0f81d139e5826ce5c412f36ee8bb42dd">Подробнее...</a><br/></td></tr>
 <tr class="separator:a0f81d139e5826ce5c412f36ee8bb42dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +249,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 </div>
 </div>
+<a class="anchor" id="aac7e846358d28d97adc2d4f342f4fa4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bulk::CmdProcessContext::peek_process_by_this </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка необходимости команды обработки данным контекстом. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>- входные данные, содержащие команды. </td></tr>
+    <tr><td class="paramname">size</td><td>- размер входных данных. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a71cf06654ffe110e700d1bcc8b7d6e9a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +348,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>- handle от имени которого выполняется обработка. </td></tr>
-    <tr><td class="paramname">data</td><td>- входной данные, содержащие команды. </td></tr>
+    <tr><td class="paramname">data</td><td>- входные данные, содержащие команды. </td></tr>
     <tr><td class="paramname">size</td><td>- размер входных данных. </td></tr>
     <tr><td class="paramname">finish_bulk</td><td>- принудительное завершение блока команд. </td></tr>
   </table>

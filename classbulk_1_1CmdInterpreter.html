@@ -107,6 +107,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 <tr class="separator:adb24852542ba741c1bd9d7cc31732248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047fd216fc4cddd6243a60f7342623f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdInterpreter.html#a047fd216fc4cddd6243a60f7342623f3">~CmdInterpreter</a> ()=default</td></tr>
 <tr class="separator:a047fd216fc4cddd6243a60f7342623f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904326dab6b9fc8531cd2999f1a73126"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdInterpreter.html#a904326dab6b9fc8531cd2999f1a73126">peek_dyn_bulk_start</a> (const std::string &amp;input)</td></tr>
+<tr class="memdesc:a904326dab6b9fc8531cd2999f1a73126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка запуска динамического блока по принятой команды.  <a href="#a904326dab6b9fc8531cd2999f1a73126">Подробнее...</a><br/></td></tr>
+<tr class="separator:a904326dab6b9fc8531cd2999f1a73126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d265f1b9fc0a80a3dbfc6529a99037e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbulk_1_1CmdInterpreter.html#a9d265f1b9fc0a80a3dbfc6529a99037e">interpret</a> (const std::string &amp;input, std::string &amp;cmd)</td></tr>
 <tr class="memdesc:a9d265f1b9fc0a80a3dbfc6529a99037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Интерпретация принятой команды.  <a href="#a9d265f1b9fc0a80a3dbfc6529a99037e">Подробнее...</a><br/></td></tr>
 <tr class="separator:a9d265f1b9fc0a80a3dbfc6529a99037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,6 +231,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
 
 <p>Проверка завершенности динамического блока. </p>
 <dl class="section return"><dt>Возвращает</dt><dd>true - динамический блок команд заверешен, false - динамический блок команд не завершен. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a904326dab6b9fc8531cd2999f1a73126"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bulk::CmdInterpreter::peek_dyn_bulk_start </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка запуска динамического блока по принятой команды. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>- входная команда. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - будет начат динамический блок, false - не будет начат динамический блок. </dd></dl>
 
 </div>
 </div>
