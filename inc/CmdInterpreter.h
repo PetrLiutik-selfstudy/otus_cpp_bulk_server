@@ -19,6 +19,13 @@ class CmdInterpreter {
     ~CmdInterpreter() = default;
 
     /**
+    * @brief Проверка запуска динамического блока по принятой команды.
+    * @param input - входная команда.
+    * @return true - будет начат динамический блок, false - не будет начат динамический блок.
+    */
+    bool peek_dyn_bulk_start(const std::string &input);
+
+    /**
      * @brief Интерпретация принятой команды.
      * @param input - входная команда.
      * @param cmd - команда для помещения в пул.

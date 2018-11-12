@@ -4,6 +4,7 @@
 
 #include <mutex>
 #include <set>
+#include <vector>
 
 namespace bulk {
 
@@ -46,7 +47,7 @@ class CmdProcessor  {
     std::mutex contexts_mutex_{};
     std::map<handle_t, std::shared_ptr<CmdProcessContext>> contexts_;
     uint8_t context_id_{};
-    size_t seed_{};
+    std::vector<handle_t> free_handles_;
 };
 
 } // namespace bulk.

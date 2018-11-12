@@ -9,7 +9,7 @@ BulkClientSession::BulkClientSession(size_t bulk_size, ba::ip::tcp::socket sock)
 }
 
 void BulkClientSession::start() {
-  handle_ = bulk::CmdProcessor::get_instance().create_context(3);
+  handle_ = bulk::CmdProcessor::get_instance().create_context(bulk_size_);
   self_   = shared_from_this();
   handle_read();
 }

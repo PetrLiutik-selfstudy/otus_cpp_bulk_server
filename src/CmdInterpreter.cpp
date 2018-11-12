@@ -2,6 +2,10 @@
 
 namespace bulk {
 
+bool CmdInterpreter::peek_dyn_bulk_start(const std::string &input) {
+  return (input == "{");
+}
+
 bool CmdInterpreter::interpret(const std::string &input, std::string &cmd) {
   if (input.empty()) {
     /// Завершение по EOF.

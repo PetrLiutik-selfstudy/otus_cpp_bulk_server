@@ -13,6 +13,14 @@ void CmdProcessContext::subscribe(observer_t observer) {
     observers_.emplace_back(std::move(observer));
 }
 
+bool CmdProcessContext::peek_process_by_this(const char* data, std::size_t size) {
+  if(nullptr != data && size > 0) {
+    std::string input{data, 1};
+    return interpreter_.peek_dyn_bulk_start(input);
+  }
+  return false;
+}
+
 void CmdProcessContext::process(const handle_t& handle, const char* data, std::size_t size, bool finish_bulk) {
   if(nullptr != data)
     data_.append(data, size);
@@ -65,7 +73,7 @@ bool CmdProcessContext::is_busy() {
 }
 
 bool CmdProcessContext::is_busy(const handle_t& handle) {
-  return handle_ != handle;
+  return handle_ == handle;
 }
 
 } // namespace bulk.

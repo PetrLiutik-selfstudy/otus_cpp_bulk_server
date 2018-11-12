@@ -35,9 +35,16 @@ class CmdProcessContext : public IObservable  {
     void subscribe(observer_t observer) final;
 
     /**
+    * @brief Проверка необходимости команды обработки данным контекстом.
+    * @param data - входные данные, содержащие команды.
+    * @param size - размер входных данных.
+    */
+    bool peek_process_by_this(const char* data, std::size_t size);
+
+    /**
      * @brief Обработка входной команды.
      * @param handle - handle от имени которого выполняется обработка.
-     * @param data - входной данные, содержащие команды.
+     * @param data - входные данные, содержащие команды.
      * @param size - размер входных данных.
      * @param finish_bulk - принудительное завершение блока команд.
      */
