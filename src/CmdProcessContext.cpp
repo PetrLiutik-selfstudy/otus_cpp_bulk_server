@@ -22,6 +22,9 @@ bool CmdProcessContext::peek_process_by_this(const char* data, std::size_t size)
 }
 
 void CmdProcessContext::process(const handle_t& handle, const char* data, std::size_t size, bool finish_bulk) {
+  // Назначение handle от имени которого идет обработка.
+  handle_ = handle;
+
   if(nullptr != data)
     data_.append(data, size);
   size_t rows{};
@@ -49,9 +52,10 @@ void CmdProcessContext::process(const handle_t& handle, const char* data, std::s
       break;
   }
 
-  // Назначение handle от имени которого идет обработка.
-  handle_t empty_handle{};
-  handle_ = interpreter_.is_dyn_bulk_finished() ? empty_handle : handle;
+  // В случае отсутствия динамического блока и необработанных данных освобождение контекста
+  // для возможности смешивания команд.
+  if(data_.empty() && interpreter_.is_dyn_bulk_finished())
+    handle_ = handle_t{};
 }
 
 void CmdProcessContext::publish(const Bulk& bulk) {
